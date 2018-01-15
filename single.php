@@ -17,7 +17,7 @@
 				<span><?php the_time('M Y'); ?></span>
 			</p>
 			<div class="postInfo">
-				<p>Written by <?php the_author(); ?> in <?php the_category(', ') ?></p>
+				<p>Written by <?php the_author(); ?></p>
 				<p class="postComCount">
 					<strong>&asymp; <?php comments_popup_link( '0 Comments', '1 Comment', '% Comments', 'comments-link'); ?></strong>
 				</p>
@@ -26,18 +26,6 @@
 		<div class="postContent">
 			<div class="postExtras">
 				<p><?php edit_post_link('[Edit this article]', '', ''); ?></p>
-				<p><strong>Tags</strong></p>
-				<p>
-				<?php
-					$hastags = get_the_tags();
-					if ($hastags) {
-				  		the_tags('',', ','');
-					}
-					else {
-						echo 'No tags :(';
-					}
-				?>
-				</p>
 				<?php
 					$socialItems = unserialize(get_option('t-social-items'));
 				?>

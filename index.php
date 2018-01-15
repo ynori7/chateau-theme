@@ -26,8 +26,6 @@
 		<div class="postContent">
 			<div class="postExtras">
 				<p><?php edit_post_link('[Edit this article]', '', ''); ?></p>
-				<p><strong>Tags</strong></p>
-				<p><?php the_tags('',', ',''); ?></p>
 				<p><strong>Share it</strong></p>
 				<ul>
 					<li class="shareTwitter"><a rel="nofollow" href="http://twitter.com/home?status=<?php the_title(); ?>+<?php the_permalink() ?>" title="Share this post on Twitter" target="_blank">Twitter</a></li>

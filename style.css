@@ -206,7 +206,7 @@ Tags: white, red, black, clean, chateau
 						.postEntry h6 {color:#333; font-size:0.8em; font-weight:normal}				
 				
 						/*- Paragraphs and Lists -*/
-						.postEntry p:first-child:first-line {text-transform:uppercase;}
+						/*.postEntry p:first-child:first-line {text-transform:uppercase;}*/
 						.postEntry p,
 						.postEntry li {color:#333; font-size:1.05em;}
 						.postEntry p {line-height:180%; padding-bottom:20px;}
