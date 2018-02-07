@@ -3,25 +3,7 @@
 
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		<title>
-			<?php if (function_exists('is_tag') && is_tag()) {
-				single_tag_title('Tag Archive for &quot;'); echo '&quot; &ndash; '; 
-			} elseif (is_archive()) {
-				wp_title(''); echo ' Archive &ndash; '; 
-			} elseif (is_search()) {
-			  	echo 'Search results for &quot;'.wp_specialchars($s).'&quot; &ndash; ';
-			} elseif (!(is_404()) && (is_single()) || (is_page())) {
-				wp_title(''); echo ' &ndash; ';
-			} elseif (is_404()) {
-				echo 'Not Found &ndash; ';
-			} if (is_home()) {
-				bloginfo('name'); echo ' &ndash; '; bloginfo('description');
-			} else {
-				bloginfo('name');
-			} if ($paged > 1) {
-				echo ' &ndash; page '. $paged;
-			} ?>
-		</title>
+		<title><?php wp_title(''); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<?php
 			$colorStyle = get_option('t-c-style');
